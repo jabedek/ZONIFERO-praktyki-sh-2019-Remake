@@ -1,0 +1,77 @@
+@import 'variables';
+
+html {
+  font-size: calc(1em + 1vw);
+}
+
+.headline1,
+.big-headline-text {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+
+  color: $product-color;
+  &--secondary {
+    color: $text-color;
+  }
+}
+
+.headline2 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 3vw;
+  line-height: 1rem;
+
+  @media (max-width: 375px) {
+    font-size: 7vw;
+  }
+}
+
+.headline3 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 19;
+  line-height: 26%;
+  background: red;
+}
+
+.headline4 {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 17;
+  background: red;
+}
+
+.paragraph {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.5rem;
+  line-height: 8vw;
+
+  @media (max-width: 375px) {
+    font-size: 4.5vw;
+  }
+}
+
+.description-text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: $text-color;
+  line-height: 1.5rem;
+}
+
+.input-label-text {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.6rem;
+  color: $text-color;
+}
+
+.input-placeholder-text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $text-color;
+}

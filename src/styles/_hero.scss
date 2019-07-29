@@ -1,0 +1,251 @@
+@import 'variables';
+
+// DESKTOP (> 700px)
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: 25em; // or 60vw
+  margin: 0;
+  padding-left: $section-margin-left;
+
+  position: relative;
+  top: 9em;
+  //  font-size: 1em;
+
+  &__headline {
+    order: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 4.25em;
+    margin-bottom: 1em;
+    width: 40vw;
+    font-family: 'Poppins';
+    font-weight: 700;
+    line-height: 1.1em;
+    color: $product-color;
+
+    &--secondary {
+      color: $text-color;
+    }
+
+    @media (min-width: $mobile-width+1) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__images {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50em;
+    width: 45vw;
+    position: relative;
+
+    @media (min-width: $mobile-width+1) {
+      top: -8em;
+    }
+
+    &--top {
+      height: 50em;
+      background-image: url(../images/hand-cut.png);
+      background-repeat: no-repeat;
+      background-position: 2em center;
+      background-size: 65%;
+    }
+
+    &--bottom {
+      height: 50em;
+      background-image: url(../images/desks.png);
+      background-repeat: no-repeat;
+      background-position: -0.1em center;
+      background-size: 95%;
+    }
+  }
+
+  .mobiles {
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 8.25em;
+    width: 40vw;
+
+    position: relative;
+    top: -8em;
+
+    &__link {
+      display: inline-block;
+      margin-right: 0.4em;
+      margin-top: 1em;
+      color: $background-color-secondary;
+      background: black;
+      height: 4vw;
+      width: 11vw;
+      font-size: 0.75em;
+      // line-height: 4vw;
+      line-height: 4vw;
+      text-align: center;
+    }
+
+    &__paragraph {
+      text-align: initial;
+      font-size: 1.6vw;
+      font-size: 0.7em;
+      line-height: 2.5vw;
+      width: 80%;
+    }
+  }
+
+  // &__details >> .descriptions (other section and scss!!) ALSO WATHCO UT WITH MEDIA Q.
+}
+
+// MOBILE (330px-700px)
+@media (max-width: $mobile-width) {
+  .hero-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 4em;
+    margin: 0;
+    height: initial;
+    position: static;
+
+    &__headline {
+      flex-basis: initial;
+      order: 1;
+      display: block;
+      font-size: 10vw;
+      white-space: nowrap;
+      padding: 0 0.35em;
+      box-sizing: border-box;
+    }
+
+    &__images {
+      flex-basis: initial;
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      width: 100%;
+      height: 120vw;
+      position: relative;
+
+      &--top {
+        height: 120vw;
+        background-image: url(../images/hand-cut.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+      }
+
+      &--bottom {
+        height: 120vw;
+        background-image: url(../images/desks.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0% 35%;
+      }
+    }
+
+    .mobiles {
+      order: 3;
+      text-align: center;
+      height: 90vw;
+      flex-basis: initial;
+      width: 100vw;
+      position: initial;
+      margin-bottom: 5vh;
+
+      &__link {
+        padding: 0;
+        display: inline-block;
+        margin: 1em 0.4em;
+        color: $background-color-secondary;
+        background: black;
+
+        // height: 2.8em;
+        // width: 6.5em;
+
+        // height: 2.4rem;
+        // width: 7rem;
+
+        height: 14vw;
+        width: 40vw;
+        line-height: 14vw;
+      }
+
+      &__paragraph {
+        width: 90vw;
+        font-size: 2.5vh;
+        font-size: 5vw;
+        line-height: 1.7rem;
+        text-align: initial;
+        padding: 0.1em;
+        margin: 0 auto;
+      }
+    }
+
+    &__details {
+      position: initial;
+      position: relative;
+      margin-top: -30vw;
+      padding: 0 0.7em;
+      display: initial;
+
+      .column {
+        display: none;
+        width: initial;
+        padding: 0 0.7em;
+
+        &:first-child {
+          display: block;
+        }
+
+        &__headline {
+          padding-bottom: 0.6em;
+          font-size: 7vw;
+
+          font-size: 1.7rem;
+          width: 100vw;
+        }
+
+        &__paragraph {
+          font-size: 5.5vw;
+          margin: 0 auto;
+        }
+
+        &__collapsed {
+          display: flex;
+          width: 25%;
+          margin: 2em auto;
+
+          justify-content: space-around;
+        }
+
+        &__collapsed-item {
+          height: 0.3em;
+          width: 0.3em;
+          background: black;
+          border-radius: 100%;
+          border: 1px solid transparent;
+
+          &--active {
+            background: $product-color;
+          }
+        }
+      }
+    }
+  }
+}

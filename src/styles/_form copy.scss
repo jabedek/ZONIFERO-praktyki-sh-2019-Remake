@@ -1,0 +1,106 @@
+@import 'variables';
+.form {
+  width: auto;
+  margin: 0 auto;
+  padding: 0 0.7em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $mobile-width + 1) {
+    flex-direction: row;
+    padding-left: 12vw;
+
+    * {
+      font-size: 85%;
+    }
+  }
+}
+
+.group-container {
+  margin-top: 2em;
+  display: initial;
+  position: relative;
+  padding: 0;
+  @media (min-width: $mobile-width + 1) {
+    width: 40vw;
+    &--big {
+      flex-grow: 2;
+      width: 100vw;
+    }
+  }
+  .group-wrapper {
+    padding: 0.4em;
+    font-family: Roboto;
+    background-image: linear-gradient(
+      to right,
+      black 15%,
+      rgba(255, 255, 255, 0) 0%
+    ); // 'black 15%' - length of each dot
+    background-position: bottom;
+    background-size: 2vw 0.1vh; // space between dots and height
+    background-repeat: repeat-x;
+
+    @media (min-width: $mobile-width + 1) {
+      background-image: linear-gradient(
+        to right,
+        black 0.2vw,
+        rgba(255, 255, 255, 0) 0%
+      );
+      background-size: 1vw 2%;
+      background-repeat: repeat-x;
+    }
+
+    .group {
+      &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+        cursor: text;
+        font-size: 75%;
+        opacity: 1;
+        transition: all 0.2s;
+        color: $text-color;
+
+        &--required {
+          &::after {
+            color: $product-color;
+            font-weight: 500;
+            content: ' *';
+          }
+        }
+      }
+
+      &__input {
+        font-size: 1.5em;
+        font-family: inherit;
+        padding-top: 1em;
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+
+        &::placeholder {
+          opacity: 1;
+          transition: all 0.2s;
+        }
+
+        &:placeholder-shown:not(:focus)::placeholder {
+          opacity: 0;
+        }
+
+        &:placeholder-shown:not(:focus) + * {
+          font-size: 150%;
+          opacity: 1;
+          top: 1em;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

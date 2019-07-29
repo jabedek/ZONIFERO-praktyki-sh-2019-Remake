@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'texts';
+@import 'variables';
+@import 'header-navi';
+@import 'hero';
+@import 'form';
+@import 'descriptions';
+
+body {
+  width: 100%;
+}
+
+.main-container {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}

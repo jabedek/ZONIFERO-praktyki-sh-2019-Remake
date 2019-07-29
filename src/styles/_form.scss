@@ -1,0 +1,147 @@
+@import 'variables';
+.form {
+  margin: 0 auto;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0.5em $section-margin-left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Roboto;
+  /*
+  @media (min-width: $mobile-width + 1) {
+    flex-direction: row;
+    padding-left: 12vw;
+
+    * {
+      font-size: 85%;
+    }
+  }
+  */
+}
+/*
+.group-container {
+  margin-top: 2em;
+  display: initial;
+  position: relative;
+  padding: 0;
+  @media (min-width: $mobile-width + 1) {
+    width: 40vw;
+    &--big {
+      flex-grow: 2;
+      width: 100vw;
+    }
+  }
+}
+*/
+
+.group-container {
+  margin: 1em 0;
+  padding: 0.44em;
+  box-sizing: border-box;
+  border: 1px solid none;
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    black 20%,
+    rgba(255, 255, 255, 0) 0%
+  ); // 'black 15%' - length of each dot
+  background-position: bottom;
+  background-size: 0.25em 0.05em; // space between dots and height
+  background-repeat: repeat-x;
+
+  /*
+  @media (min-width: $mobile-width + 1) {
+    background-image: linear-gradient(
+      to right,
+      black 0.2vw,
+      rgba(255, 255, 255, 0) 0%
+    );
+    background-size: 1vw 2%;
+    background-repeat: repeat-x;
+  }
+  
+*/
+
+  // textarea group-container
+  &--big {
+    flex-grow: 2;
+    width: 100%;
+  }
+
+  .group {
+    width: 30vw;
+
+    &__label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      white-space: nowrap;
+      cursor: text;
+      font-size: 40%; // was 75%
+      opacity: 1;
+      transition: all 0.2s;
+      color: $text-color;
+      &--required {
+        &::after {
+          color: $product-color;
+          font-weight: 500;
+          content: ' *';
+        }
+      }
+
+      // textarea label
+      &--secondary {
+      }
+    }
+
+    &__input {
+      font-size: 0.8em; // was 1.5em
+      font-family: inherit;
+      padding-top: 0.5em;
+      margin-left: -0.5em;
+      border: 0;
+      border-radius: 0;
+      width: 100%;
+
+      &::placeholder {
+        opacity: 1;
+        transition: all 0.2s;
+      }
+
+      &:placeholder-shown:not(:focus)::placeholder {
+        opacity: 0;
+      }
+
+      &:placeholder-shown:not(:focus) + * {
+        font-size: 80%; // was 150%
+        opacity: 1;
+        top: 1em;
+        // margin-left: -0.1em;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &--wide {
+        width: 252%;
+      }
+    }
+  }
+}
+
+.submit-container {
+  margin: 1em 0;
+  width: 100%;
+  text-align: center;
+
+  .submit {
+    display: inline;
+    padding: 1.5em 3em;
+    background: $product-color;
+    color: #fff;
+    border: none;
+  }
+}
