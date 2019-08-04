@@ -3,8 +3,7 @@
 .descriptions {
   padding-left: $section-margin-left;
   position: relative;
-  top: -3.5em;
-  margin-top: 1em;
+  top: -0em;
   display: flex;
   flex-direction: row;
   //  justify-content: space-between;
@@ -19,7 +18,7 @@
     margin-right: 3em;
 
     &__headline {
-      padding-bottom: 0.6em;
+      padding-bottom: 1em;
       font-size: 0.85rem;
     }
 

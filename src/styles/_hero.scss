@@ -11,10 +11,17 @@
   height: 25em; // or 60vw
   margin: 0;
   padding-left: $section-margin-left;
-
   position: relative;
   top: 9em;
-  //  font-size: 1em;
+
+  // hero mobile (330px-700px)
+  @media (max-width: $mobile-width) {
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 4em;
+    height: initial;
+    position: static;
+  }
 
   &__headline {
     order: 1;
@@ -27,13 +34,24 @@
     font-weight: 700;
     line-height: 1.1em;
     color: $product-color;
+    font-size: 1.8rem;
+
+    &__paragraph {
+      white-space: pre-wrap;
+    }
 
     &--secondary {
       color: $text-color;
     }
 
-    @media (min-width: $mobile-width+1) {
-      font-size: 1.3rem;
+    // hero__headline mobile (330px-700px)
+    @media (max-width: $mobile-width) {
+      flex-basis: initial;
+      display: block;
+      font-size: 1.9rem;
+      white-space: nowrap;
+      padding: 0 0.35em;
+      box-sizing: border-box;
     }
   }
 
@@ -46,9 +64,15 @@
     flex-basis: 50em;
     width: 45vw;
     position: relative;
+    top: -7em;
 
-    @media (min-width: $mobile-width+1) {
-      top: -8em;
+    // hero__images mobile (330px-700px)
+    @media (max-width: $mobile-width) {
+      order: 2;
+      width: 100%;
+      height: 120vw;
+      flex-basis: initial;
+      top: 0;
     }
 
     &--top {
@@ -57,6 +81,12 @@
       background-repeat: no-repeat;
       background-position: 2em center;
       background-size: 65%;
+
+      // hero__images--top mobile (330px-700px)
+      @media (max-width: $mobile-width) {
+        height: 120vw;
+        background-size: 90%;
+      }
     }
 
     &--bottom {
@@ -65,6 +95,13 @@
       background-repeat: no-repeat;
       background-position: -0.1em center;
       background-size: 95%;
+
+      // hero__images--bottom mobile (330px-700px)
+      @media (max-width: $mobile-width) {
+        height: 120vw;
+        background-size: 100%;
+        background-position: 0% 35%;
+      }
     }
   }
 
@@ -74,92 +111,11 @@
     flex-shrink: 1;
     flex-basis: 8.25em;
     width: 40vw;
-
     position: relative;
     top: -8em;
 
-    &__link {
-      display: inline-block;
-      margin-right: 0.4em;
-      margin-top: 1em;
-      color: $background-color-secondary;
-      background: black;
-      height: 4vw;
-      width: 11vw;
-      font-size: 0.75em;
-      // line-height: 4vw;
-      line-height: 4vw;
-      text-align: center;
-    }
-
-    &__paragraph {
-      text-align: initial;
-      font-size: 1.6vw;
-      font-size: 0.7em;
-      line-height: 2.5vw;
-      width: 80%;
-    }
-  }
-
-  // &__details >> .descriptions (other section and scss!!) ALSO WATHCO UT WITH MEDIA Q.
-}
-
-// MOBILE (330px-700px)
-@media (max-width: $mobile-width) {
-  .hero-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding: 0;
-    padding-top: 4em;
-    margin: 0;
-    height: initial;
-    position: static;
-
-    &__headline {
-      flex-basis: initial;
-      order: 1;
-      display: block;
-      font-size: 10vw;
-      white-space: nowrap;
-      padding: 0 0.35em;
-      box-sizing: border-box;
-    }
-
-    &__images {
-      flex-basis: initial;
-      display: flex;
-      flex-direction: column;
-      order: 2;
-      width: 100%;
-      height: 120vw;
-      position: relative;
-
-      &--top {
-        height: 120vw;
-        background-image: url(../images/hand-cut.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 90%;
-      }
-
-      &--bottom {
-        height: 120vw;
-        background-image: url(../images/desks.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-position: 0% 35%;
-      }
-    }
-
-    .mobiles {
+    // mobiles mobile (330px-700px)
+    @media (max-width: $mobile-width) {
       order: 3;
       text-align: center;
       height: 90vw;
@@ -167,84 +123,44 @@
       width: 100vw;
       position: initial;
       margin-bottom: 5vh;
+    }
 
-      &__link {
+    &__link {
+      display: inline-block;
+      margin-right: 0.4em;
+      margin-top: 1em;
+      color: $background-color-secondary;
+      background: black;
+      height: 4.5vw;
+      width: 12vw;
+      font-size: 0.75em;
+      // line-height: 4vw;
+      line-height: 5vw;
+      text-align: center;
+
+      // mobiles__link mobile (330px-700px)
+      @media (max-width: $mobile-width) {
         padding: 0;
-        display: inline-block;
         margin: 1em 0.4em;
-        color: $background-color-secondary;
-        background: black;
-
-        // height: 2.8em;
-        // width: 6.5em;
-
-        // height: 2.4rem;
-        // width: 7rem;
-
         height: 14vw;
         width: 40vw;
         line-height: 14vw;
       }
-
-      &__paragraph {
-        width: 90vw;
-        font-size: 2.5vh;
-        font-size: 5vw;
-        line-height: 1.7rem;
-        text-align: initial;
-        padding: 0.1em;
-        margin: 0 auto;
-      }
     }
 
-    &__details {
-      position: initial;
-      position: relative;
-      margin-top: -30vw;
-      padding: 0 0.7em;
-      display: initial;
+    &__paragraph {
+      text-align: initial;
+      font-size: 0.75rem;
+      line-height: 2.5vw;
+      width: 95%;
 
-      .column {
-        display: none;
-        width: initial;
-        padding: 0 0.7em;
-
-        &:first-child {
-          display: block;
-        }
-
-        &__headline {
-          padding-bottom: 0.6em;
-          font-size: 7vw;
-
-          font-size: 1.7rem;
-          width: 100vw;
-        }
-
-        &__paragraph {
-          font-size: 5.5vw;
-          margin: 0 auto;
-        }
-
-        &__collapsed {
-          display: flex;
-          width: 25%;
-          margin: 2em auto;
-
-          justify-content: space-around;
-        }
-
-        &__collapsed-item {
-          height: 0.3em;
-          width: 0.3em;
-          background: black;
-          border-radius: 100%;
-          border: 1px solid transparent;
-
-          &--active {
-            background: $product-color;
-          }
-        }
+      // hero__paragraph mobile (330px-700px)
+      @media (max-width: $mobile-width) {
+        width: 90vw;
+        font-size: 5vw;
+        line-height: 1.7rem;
+        padding: 0.1em;
+        margin: 0 auto;
       }
     }
   }
