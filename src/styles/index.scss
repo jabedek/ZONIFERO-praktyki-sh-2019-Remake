@@ -7,12 +7,18 @@
 @import 'descriptions';
 @import 'problem-solving';
 @import 'features';
+@import 'footer';
 
 body {
   width: 100%;
+
 }
 
-.main-container {
+::-webkit-scrollbar {
+  display: none;
+}
+
+.zonifero {
   width: 100%;
   background: #fff;
   display: flex;

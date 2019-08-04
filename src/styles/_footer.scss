@@ -1,0 +1,31 @@
+@import 'variables';
+
+.footer {
+    background-color: $product-color;
+    width: 100%;
+    height: 25vw;
+    font-size: .5rem;
+    padding: 5em 0;
+    color: $background-color;
+
+    &__lists {
+        display: flex;
+        margin: 0 $section-margin-left;
+        justify-content: space-between;
+    }
+
+    .list {
+        font-family: $regular-font;
+        font-weight: 100;
+        // margin-right: 10em;
+
+        &__title {
+            font-weight: 500;
+            padding: 2em 0;
+        }
+
+        &__item {
+            line-height: 1.5;
+        }
+    }
+}

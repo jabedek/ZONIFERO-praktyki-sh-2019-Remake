@@ -1,5 +1,13 @@
 @import 'variables';
 
+.contact-form {
+  padding-top: 5em;
+
+  &__title {
+    padding: 0.5em $section-margin-left;
+  }
+}
+
 .form {
   margin: 0 auto;
   width: 100vw;

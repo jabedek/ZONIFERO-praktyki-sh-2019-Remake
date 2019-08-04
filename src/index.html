@@ -5,20 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zonifero - praktyki - REMAKE</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700|Roboto:100,300,400&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700|Roboto:100,300,400&display=swap"
     rel="stylesheet" />
 
 </head>
 
 <body>
-  <script>
-    function Scrolldown() {
-      window.scroll(0, 0);
-    }
-
-    window.onload = Scrolldown;
-  </script>
-  <div class="main-container">
+  <div class="zonifero">
 
     <!-- Header -->
     <header class="header">
@@ -56,17 +49,12 @@
             zonifero WorkPlace <span class="arrow"></span>
           </li>
           <li class="list__item list__item--active">
-            <a href="index.html#problem-solving-app">Overview</a>
+            <a href="index.html#problem-solving-app">Problem solving app</a>
           </li>
           <li class="list__item list__item--active">
             <a href="index.html#features">Features</a>
           </li>
-          <li class="list__item list__item--active ">
-            <a href="#">Specs</a>
-          </li>
-          <li class="list__item list__item--active">
-            <a href="#">FAQ</a>
-          </li>
+
           <li class="list__item list__item--active ">
             <a href="index.html#contact-form" class="">Contact</a>
           </li>
@@ -94,8 +82,8 @@
           Effectively and quickly from your mobile device. Staying connected
           has never been easier with zonifero WorkPlace.
         </p>
-        <a class="mobiles__link">Google</a>
-        <a class="mobiles__link">Apple</a>
+        <a class="mobiles__link">get it at Google</a>
+        <a class="mobiles__link">get it at Apple</a>
       </section>
     </article>
 
@@ -129,7 +117,8 @@
     </article>
 
     <!-- Problem solving app -->
-    <article id="problem-solving-app" class="problem-solving">
+    <span id="problem-solving-app"></span>
+    <article class="problem-solving">
       <p class="problem-solving__title section-header">Problem solving app</p>
       <div class="list">
         <section class="list__item">
@@ -176,7 +165,8 @@
     </article>
 
     <!-- Features -->
-    <article id="features" class="features">
+    <span id="features"></span>
+    <article class="features">
       <p class="features__title section-header">Features</p>
 
       <div class="features__images--bottom">
@@ -229,68 +219,110 @@
 
       <section class="system-info">
         <section class="column">
-          <h2 class="headline2">System requirements</h2>
-          <p class=" paragraph-text">
+          <h2 class="column__headline headline2">System requirements</h2>
+          <p class="paragraph-text">
             Tools for real-time management of all your facilities and people
+            across multiple sites. Ease, speed and effectiveness of facilities
+            communications. Tools for real-time management of all your facilities and people
             across multiple sites. Ease, speed and effectiveness of facilities
             communications.
           </p>
         </section>
 
         <section class="column">
-          <h2 class="headline2">24/7 Support</h2>
+          <h2 class="column__headline headline2">24/7 Support</h2>
           <p class="column__paragraph paragraph-text">
             Tools for real-time management of all your facilities and people
             across multiple sites. Ease, speed and effectiveness of facilities
+            communications. Tools for real-time management of all your facilities and people
+            across multiple sites. Ease, speed and effectiveness of facilities
             communications.
           </p>
+        </section>
+
+        <section class="download">
+          <p class="download__title">Download</p>
+          <p>ZONIFERO WorkPlace brochure and specification</p>
+          <p>PDF</p>
+          <P>19.34 MB</P>
+          <p class="download__button">Download</p>
         </section>
       </section>
     </article>
 
     <!-- Contact form -->
-    <form id="contact-form" class="form">
-      <div class="group-container">
-        <div class="group">
-          <input class="group__input" id="first" type="text" placeholder=" " required />
-          <label class="group__label group__label--required" for="first">First name</label>
+    <span id="contact-form"></span>
+
+    <article class="contact-form">
+      <p class="contact-form__title section-header">Contact</p>
+      <form class="form">
+        <div class="group-container">
+          <div class="group">
+            <input class="group__input" id="first" type="text" placeholder=" " required />
+            <label class="group__label group__label--required" for="first">First name</label>
+          </div>
         </div>
-      </div>
 
-      <div class="group-container">
-        <div class="group">
-          <input class="group__input" id="family-name" type="text" placeholder=" " required />
-          <label class="group__label group__label--required" for="family-name">Family name</label>
+        <div class="group-container">
+          <div class="group">
+            <input class="group__input" id="family-name" type="text" placeholder=" " required />
+            <label class="group__label group__label--required" for="family-name">Family name</label>
+          </div>
         </div>
-      </div>
 
-      <div class="group-container">
-        <div class="group">
-          <input class="group__input" id="your-email" type="email" placeholder=" " required />
-          <label class="group__label group__label--required" for="your-email">Your email</label>
+        <div class="group-container">
+          <div class="group">
+            <input class="group__input" id="your-email" type="email" placeholder=" " required />
+            <label class="group__label group__label--required" for="your-email">Your email</label>
+          </div>
         </div>
-      </div>
 
-      <div class="group-container">
-        <div class="group">
-          <input class="group__input" id="your-phone" type="tel" placeholder=" " />
-          <label class="group__label" for="your-phone">Your phone</label>
+        <div class="group-container">
+          <div class="group">
+            <input class="group__input" id="your-phone" type="tel" placeholder=" " />
+            <label class="group__label" for="your-phone">Your phone</label>
+          </div>
         </div>
-      </div>
 
-      <div class="group-container group-container--big">
-        <div class="group">
-          <input class="group__input group__input--wide !group__input--secondary" id="message" placeholder=" "
-            required></input>
-          <label class="group__label group__label--required group__label--secondary " for="message">Message</label>
+        <div class="group-container group-container--big">
+          <div class="group">
+            <input class="group__input group__input--wide !group__input--secondary" id="message" placeholder=" "
+              required></input>
+            <label class="group__label group__label--required group__label--secondary " for="message">Message</label>
+          </div>
         </div>
-      </div>
 
-      <div class="submit-container">
-        <input class="submit" type="submit" value="Send message" />
-      </div>
-    </form>
+        <div class="submit-container">
+          <input class="submit" type="submit" value="Send message" />
+        </div>
+      </form>
+    </article>
 
+    <footer class="footer">
+      <section class="footer__lists">
+        <ul class="list">
+          <dl class="list__title">Products:</dl>
+          <li class="list__item">zonifero business</li>
+          <li class="list__item">zonifero real estate</li>
+          <li class="list__item">zonifero lobby</li>
+          <li class="list__item">zonifero services</li>
+          <li class="list__item">zonifero tv</li>
+        </ul>
+        <ul class="list">
+          <dl class="list__title">Resources:</dl>
+          <li class="list__item">Documentation</li>
+          <li class="list__item">FAQ</li>
+          <li class="list__item">Blog</li>
+          <li class="list__item">Media</li>
+        </ul>
+        <ul class="list">
+          <dl class="list__title">About:</dl>
+          <li class="list__item">About us</li>
+          <li class="list__item">Company</li>
+          <li class="list__item">Blog</li>
+        </ul>
+      </section>
+    </footer>
   </div>
 
 
