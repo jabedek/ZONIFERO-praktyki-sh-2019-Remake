@@ -1,4 +1,5 @@
 @import 'variables';
+
 .form {
   margin: 0 auto;
   width: 100vw;
@@ -20,6 +21,7 @@
   }
   */
 }
+
 /*
 .group-container {
   margin-top: 2em;
@@ -42,11 +44,9 @@
   box-sizing: border-box;
   border: 1px solid none;
   position: relative;
-  background-image: linear-gradient(
-    to right,
-    black 20%,
-    rgba(255, 255, 255, 0) 0%
-  ); // 'black 15%' - length of each dot
+  background-image: linear-gradient(to right,
+      black 20%,
+      rgba(255, 255, 255, 0) 0%); // 'black 15%' - length of each dot
   background-position: bottom;
   background-size: 0.25em 0.05em; // space between dots and height
   background-repeat: repeat-x;
@@ -83,6 +83,7 @@
       opacity: 1;
       transition: all 0.2s;
       color: $text-color;
+
       &--required {
         &::after {
           color: $product-color;
@@ -92,14 +93,13 @@
       }
 
       // textarea label
-      &--secondary {
-      }
+      &--secondary {}
     }
 
     &__input {
       font-size: 0.8em; // was 1.5em
       font-family: inherit;
-      padding-top: 0.5em;
+      padding-top: 0.4em;
       margin-left: -0.5em;
       border: 0;
       border-radius: 0;
@@ -114,7 +114,7 @@
         opacity: 0;
       }
 
-      &:placeholder-shown:not(:focus) + * {
+      &:placeholder-shown:not(:focus)+* {
         font-size: 80%; // was 150%
         opacity: 1;
         top: 1em;
