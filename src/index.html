@@ -7,7 +7,7 @@
   <title>Zonifero - praktyki - REMAKE</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,700|Roboto:100,300,400&display=swap"
     rel="stylesheet" />
-
+  <!-- <link rel="stylesheet" href="./styles/index.css"> -->
 </head>
 
 <body>
@@ -20,23 +20,23 @@
       </section>
 
       <section class="navi-top">
-        <ul class="list">
-          <li class="list__item">
+        <ul class="navi-top__list">
+          <li class="item">
             <a href="#">Zonifero products</a>
           </li>
-          <li class="list__item"><a href="#">Store</a></li>
-          <li class="list__item"><a href="#">Blog</a></li>
-          <li class="list__item dropdown">
+          <li class="item"><a href="#">Store</a></li>
+          <li class="item"><a href="#">Blog</a></li>
+          <li class="item dropdown">
             <span class="dropdown__arrow"></span>
             <ul class="dropdown__list">
-              <li class="list__item"><a href="#">English</a></li>
-              <li class="list__item"><a href="#">Polish</a></li>
+              <li class="item"><a href="#">English</a></li>
+              <li class="item"><a href="#">Polish</a></li>
             </ul>
           </li>
-          <li class="list__item list__item--big">
+          <li class="item item--big">
             <a href="#">Sign in</a>
           </li>
-          <li class="list__item list__item--colored">
+          <li class="item item--colored">
             <a href="#">Get the app</a>
           </li>
         </ul>
@@ -44,18 +44,21 @@
       </section>
 
       <section class="navi-bottom">
-        <ul class="list">
+        <ul class="navi-bottom__list">
           <li class="navi-bottom__title">
             zonifero WorkPlace <span class="arrow"></span>
           </li>
-          <li class="list__item list__item--active">
+          <li class="item item--active">
+            <a href="index.html#">Start</a>
+          </li>
+          <li class="item item--active">
             <a href="index.html#problem-solving-app">Problem solving app</a>
           </li>
-          <li class="list__item list__item--active">
+          <li class="item item--active">
             <a href="index.html#features">Features</a>
           </li>
 
-          <li class="list__item list__item--active ">
+          <li class="item item--active ">
             <a href="index.html#contact-form" class="">Contact</a>
           </li>
         </ul>
@@ -64,26 +67,26 @@
 
     <!-- Hero -->
     <article class="hero">
-      <section class="hero__headline ">
-        <p class="hero__paragraph">
-          Streamline <br />
-          your workspace
-        </p>
-      </section>
+
+      <p class="hero__headline">
+        Streamline <br />
+        your workspace
+      </p>
 
       <section class="hero__images">
-        <div class="hero__images--bottom">
-          <div class="hero__images--top"></div>
+        <div class="images">
+          <img class="images__item images__item--bottom" src="src/images/desks.png">
+          <img class="images__item images__item--top" src="src/images/hand-cut.png">
         </div>
       </section>
 
       <section class="mobiles">
-        <p class="mobiles__paragraph description-text">
+        <p class="mobiles__paragraph">
           Effectively and quickly from your mobile device. Staying connected
           has never been easier with zonifero WorkPlace.
         </p>
-        <a class="mobiles__link">get it at Google</a>
-        <a class="mobiles__link">get it at Apple</a>
+        <a class="mobiles__link">Google</a>
+        <a class="mobiles__link">Apple</a>
       </section>
     </article>
 
@@ -97,6 +100,7 @@
           communications.
         </p>
       </section>
+
 
       <section class="column">
         <h2 class="column__headline headline2">Employees</h2>
@@ -113,55 +117,66 @@
           your facilities.
         </p>
       </section>
-
+      <section class="collapsed-list">
+        <p class="dot dot--active"></p>
+        <p class="dot"></p>
+        <p class="dot"></p>
+        <p class="dot"></p>
+      </section>
     </article>
 
     <!-- Problem solving app -->
     <span id="problem-solving-app"></span>
-    <article class="problem-solving">
-      <p class="problem-solving__title section-header">Problem solving app</p>
-      <div class="list">
-        <section class="list__item">
-          <p class="list__item-image"></p>
-          <h3 class="list__item-headline">Use your time <br /> and space smarter</h3>
-          <p class="list__item-paragraph paragraph-text">
+    <article class="problem-solving-app">
+      <p class="problem-solving-app__title section-header">Problem solving app</p>
+      <div class="problem-solving-app__list">
+        <section class="item">
+          <p class="item__image"></p>
+          <h3 class="item__title">Use your time <br /> and space smarter</h3>
+          <p class="item__paragraph paragraph-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fuga neque molestiae? Aut amet
           </p>
         </section>
 
-        <section class="list__item">
-          <p class="list__item-image"></p>
-          <h3 class="list__item-headline">Never stress about <br /> meetings again</h3>
-          <p class="list__item-paragraph ">
+        <section class="item">
+          <p class="item__image"></p>
+          <h3 class="item__title">Never stress about <br /> meetings again</h3>
+          <p class="item__paragraph ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fuga neque molestiae? Aut amet
           </p>
         </section>
 
-        <section class="list__item">
-          <p class="list__item-image"></p>
-          <h3 class="list__item-headline">Find the right person <br /> in a breeze</h3>
-          <p class="list__item-paragraph">
+        <section class="item">
+          <p class="item__image"></p>
+          <h3 class="item__title">Find the right person <br /> in a breeze</h3>
+          <p class="item__paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fuga neque molestiae? Aut amet
           </p>
         </section>
 
-        <section class="list__item">
-          <p class="list__item-image"></p>
-          <h3 class="list__item-headline">Save your desk <br /> and room space</h3>
-          <p class="list__item-paragraph">
+        <section class="item">
+          <p class="item__image"></p>
+          <h3 class="item__title">Save your desk <br /> and room space</h3>
+          <p class="item__paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fuga neque molestiae? Aut amet
           </p>
         </section>
 
-        <section class="list__item">
-          <p class="list__item-image"></p>
-          <h3 class="list__item-headline">Swiftly introduce <br /> new employees</h3>
-          <p class="list__item-paragraph">
+        <section class="item">
+          <p class="item__image"></p>
+          <h3 class="item__title">Swiftly introduce <br /> new employees</h3>
+          <p class="item__paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde fuga neque molestiae? Aut amet
           </p>
         </section>
-
       </div>
+
+      <section class="collapsed-list">
+        <p class="dot dot--active"></p>
+        <p class="dot"></p>
+        <p class="dot"></p>
+        <p class="dot"></p>
+      </section>
     </article>
 
     <!-- Features -->
@@ -169,13 +184,14 @@
     <article class="features">
       <p class="features__title section-header">Features</p>
 
-      <div class="features__images--bottom">
-        <div class="features__images--top"></div>
+
+      <div class="features__image--bottom">
+        <div class="features__image--top"></div>
       </div>
 
       <section class="slideshow">
-        <p class="slideshow__button">
-          < </p> <p class="slideshow__button">>
+        <p class="slideshow__button slideshow__button--left">
+          < </p> <p class="slideshow__button  slideshow__button--right">>
         </p>
       </section>
 
@@ -193,34 +209,37 @@
       </section>
 
       <!-- /Features list-->
-      <ul class="list">
-        <li class="list__item">
-          <p class="list__item-title">Room booking</p>
-          <p style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna
-            aliqua.</p>
+      <ul class="features__list">
+        <li class="item">
+          <p class="item__title">Room booking</p>
+          <p class="item__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusamus est, ad animi, atque magnam dignissimos, rem praesentium modi cum fugiat quod a aperiam quos ullam
+            impedit commodi quasi? Maiores, nisi.</p>
         </li>
-        <li class="list__item">
-          <p class="list__item-title">Hot-desk booking</p>
+
+        <li class="item">
+          <p class="item__title">Hot-desk booking</p>
         </li>
-        <li class="list__item">
-          <p class="list__item-title">Status of employees</p>
+
+        <li class="item">
+          <p class="item__title">Status of employees</p>
         </li>
-        <li class="list__item">
-          <p class="list__item-title">Employee status</p>
+
+        <li class="item">
+          <p class="item__title">Employee status</p>
         </li>
-        <li class="list__item">
-          <p class="list__item-title">Request management</p>
+
+        <li class="item">
+          <p class="item__title">Request management</p>
         </li>
       </ul>
 
       <!-- /Features system informations -->
-
-
-      <section class="system-info">
+      <section class="features__system-info">
         <section class="column">
           <h2 class="column__headline headline2">System requirements</h2>
-          <p class="paragraph-text">
+          <p class="column__paragraph paragraph-text">
             Tools for real-time management of all your facilities and people
             across multiple sites. Ease, speed and effectiveness of facilities
             communications. Tools for real-time management of all your facilities and people
@@ -242,9 +261,10 @@
 
         <section class="download">
           <p class="download__title">Download</p>
-          <p>ZONIFERO WorkPlace brochure and specification</p>
-          <p>PDF</p>
-          <P>19.34 MB</P>
+          <p class="download__description">ZONIFERO WorkPlace brochure and specification</p>
+          <span class="download__file">
+            <span>PDF</span><span>19.34 MB</span>
+          </span>
           <p class="download__button">Download</p>
         </section>
       </section>
@@ -254,7 +274,7 @@
     <span id="contact-form"></span>
 
     <article class="contact-form">
-      <p class="contact-form__title section-header">Contact</p>
+      <p class="contact-form__title section-header">Contact form</p>
       <form class="form">
         <div class="group-container">
           <div class="group">

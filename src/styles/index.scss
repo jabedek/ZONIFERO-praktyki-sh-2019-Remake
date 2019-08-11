@@ -1,14 +1,16 @@
-@import 'reset';
-@import 'texts';
-@import 'variables';
-@import 'header-navi';
-@import 'hero';
-@import 'form';
-@import 'descriptions';
-@import 'problem-solving';
-@import 'features';
-@import 'footer';
+@import './utils/reset';
+@import './utils/texts';
+@import './utils/variables';
+@import './header/header';
+@import './hero/hero';
+@import './contact-form/contact-form';
+@import './descriptions/descriptions';
+@import './problem-solving-app/problem-solving-app';
+@import './features/features';
+@import './footer/footer';
+@import './mixins/mixins';
 
+html,
 body {
   width: 100%;
 
@@ -23,4 +25,31 @@ body {
   background: #fff;
   display: flex;
   flex-direction: column;
+}
+
+
+.collapsed-list {
+  display: none;
+
+  .dot {
+    display: inline-block;
+    background: black;
+    margin: 0 .2em;
+    padding: 1vw;
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+
+    &--active {
+      background: $product-color;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    margin: 2em auto;
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
 }

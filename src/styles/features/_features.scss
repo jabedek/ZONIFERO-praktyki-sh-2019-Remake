@@ -1,0 +1,199 @@
+@import '../utils/variables';
+@import '../mixins/mixins';
+@import 'features__list';
+@import 'features__system-info';
+
+.features {
+  width: 100%;
+  padding: 0;
+  margin: 5em 0 0 0;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+
+  &__title {
+    padding: 2em 0 2em $section-margin-left;
+
+    @media (max-width: $mobile-width) {
+      font-size: 4.5vw;
+      padding: 1em 0.5rem;
+    }
+  }
+
+  &__image {
+    &--top {
+      height: 40vw;
+      background-image: url(../images/mob_mobile.png);
+      background-repeat: no-repeat;
+      background-position: 75% 0%;
+      background-size: 25%;
+      position: relative;
+      z-index: 10;
+
+      @media (max-width: $mobile-width) {
+        height: 100vw;
+        background-image: url(../images/mob_mobile.png);
+        background-repeat: no-repeat;
+        background-position: 35% 135%;
+        background-size: 60%;
+        position: relative;
+        z-index: 10;
+      }
+    }
+
+    &--bottom {
+      background-image: url(../images/mob_features_bg.png);
+      background-repeat: no-repeat;
+      background-size: 100% 70%;
+      background-color: $product-color;
+
+      @media (max-width: $mobile-width) {
+        background-size: 100% 90%;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+    top: -7.5em;
+    z-index: 9;
+
+    height: 10em;
+    padding: 1em 4em;
+    box-sizing: border-box;
+
+    background-color: $product-color;
+    color: $background-color;
+
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      top: -10vw;
+      height: auto;
+      padding: 2em 0.5rem;
+    }
+  }
+
+  &__headline {
+    order: 1;
+    width: 40vw;
+    font-family: $heading-font;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 2em;
+    white-space: nowrap;
+
+    @media (max-width: 955px) {
+      font-size: 1.1rem;
+      padding: 2em 1em;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 8vw;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__paragraph {
+    order: 2;
+    width: 35vw;
+    font-family: $regular-font;
+    font-weight: 100;
+    font-size: 0.5rem;
+    padding: 8em 2em 0 2em;
+    line-height: 0.75rem;
+    box-sizing: border-box;
+
+    @media (max-width: 955px) {
+      font-size: 0.47rem;
+      padding: 8em 0 0 0;
+      width: 33vw;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      font-size: 4.5vw;
+      padding: 0;
+      margin: 2em 0;
+      line-height: 1.2;
+    }
+  }
+
+  &__view {
+    order: 3;
+    flex-grow: 1;
+    text-align: center;
+    font-family: $regular-font;
+    font-weight: 300;
+    font-size: 0.45rem;
+
+    @media (max-width: $mobile-width) {
+      font-size: 4vw;
+      width: 100%;
+      height: 5vw;
+      top: -1vw;
+    }
+
+    @media (max-width: 955px) {
+      position: relative;
+      top: 1vw;
+    }
+
+    @media (max-width: 700px) {
+      position: relative;
+      top: -2vw;
+    }
+
+  }
+
+  &__view-bordered {
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+    width: 35%;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 1em;
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+      margin: 1em auto;
+    }
+  }
+
+  .slideshow {
+    position: relative;
+    top: -8.35em;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    @include slideshow-buttons;
+
+    &__button {
+      cursor: pointer;
+      height: 2em;
+      width: 2em;
+      text-align: center;
+      line-height: 2em;
+      background: white;
+      opacity: 0.8;
+
+      @media (max-width: $mobile-width) {
+        position: absolute;
+
+        &--left {
+          left: 0;
+        }
+
+        &--right {
+          right: 0;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+@mixin slideshow-buttons {
+
+    @media (max-width: $mobile-width) {
+        top: -4.5em;
+    }
+
+    @media (max-width: 600px) {
+        top: -4.3em;
+    }
+
+    @media (max-width: 550px) {
+        top: -4.1em;
+    }
+
+    @media (max-width: 500px) {
+        top: -3.9em;
+    }
+
+    @media (max-width: 475px) {
+        top: -3.7em;
+    }
+
+    @media (max-width: 425px) {
+        top: -3.5em;
+    }
+
+    @media (max-width: 380px) {
+        top: -3.3em;
+    }
+
+    @media (max-width: 330px) {
+        top: -3.1em;
+    }
+}

@@ -1,0 +1,50 @@
+@import '../utils/variables';
+
+.footer {
+    background-color: $product-color;
+    width: 100%;
+    font-size: .5rem;
+    color: $background-color;
+
+    @media (max-width: $mobile-width) {
+        padding: 0 .5rem;
+        position: relative;
+        top: 140vw;
+        font-size: 4.5vw;
+    }
+
+    &__lists {
+        display: flex;
+        margin: 0 $section-margin-left;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 5em 0;
+
+        @media (max-width: $mobile-width) {
+            padding: 3em 0 0 0;
+            flex-direction: column;
+        }
+    }
+
+    .list {
+        font-family: $regular-font;
+        font-weight: 100;
+
+        &__title {
+            font-weight: 500;
+            padding: 2em 0;
+
+            @media (max-width: $mobile-width) {
+                padding: 0 0 1em;
+            }
+        }
+
+        &__item {
+            line-height: 1.5;
+        }
+
+        @media (max-width: $mobile-width) {
+            padding-bottom: 3em;
+        }
+    }
+}

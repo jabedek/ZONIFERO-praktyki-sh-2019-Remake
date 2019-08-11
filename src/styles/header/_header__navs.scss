@@ -1,0 +1,83 @@
+@import '../utils/variables';
+
+.header {
+    .navi-top {
+        order: 2;
+        width: 70%;
+        height: auto;
+        box-sizing: border-box;
+        text-align: right;
+        font-size: 0.4rem;
+
+        @media (max-width: $mobile-width) {
+            order: 3;
+            padding: 0;
+            margin: 0;
+            width: 25vw;
+
+            .list {
+                display: none;
+            }
+
+            .burger-navi {
+                padding: 0;
+                margin: 0;
+                padding-right: 0.5rem;
+                display: inline-block;
+                height: 5vw;
+                width: 5vw;
+                background: url(../images/burger.png) no-repeat center;
+                background-size: 75%;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .navi-bottom {
+        order: 3;
+        padding: 0;
+        width: 100%;
+        margin: 2em 0 0 0;
+        padding-left: $section-margin-left;
+        font-family: 'Roboto';
+        font-size: 0.5rem;
+        font-weight: 500;
+
+        @media (max-width: $mobile-width) {
+            order: 2;
+            width: 50%;
+            margin: 1em 0 0 0;
+            padding: 0;
+            height: 3em;
+            text-align: center;
+        }
+
+        &__title {
+            display: inline-block;
+            margin-right: 4em;
+            font-weight: 500;
+
+            &::after {
+                content: ': ';
+                position: relative;
+                left: -0.25em;
+            }
+
+            @media (max-width: $mobile-width) {
+                display: initial;
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto';
+                font-size: 0.9rem;
+                font-weight: bold;
+
+                &::after {
+                    content: '';
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

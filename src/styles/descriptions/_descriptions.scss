@@ -1,0 +1,51 @@
+@import '../utils/variables';
+
+.descriptions {
+  padding: 0 $section-margin-left;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    padding: 0 0.5rem;
+    margin-bottom: 5vh;
+  }
+
+  .column {
+    width: 23%;
+    display: block;
+
+    @media (max-width: $mobile-width) {
+      width: auto;
+      margin: 0;
+      font-size: 9vw;
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    &__headline {
+      padding-bottom: 1em;
+      font-size: 0.85rem;
+
+      @media (max-width: $mobile-width) {
+        padding-bottom: 1.6em;
+        font-size: 6vw;
+      }
+    }
+
+    &__paragraph {
+      font-size: 0.5em;
+      line-height: 1.8em;
+
+      @media (max-width: $mobile-width) {
+        font-size: 4.5vw;
+      }
+    }
+
+
+  }
+}

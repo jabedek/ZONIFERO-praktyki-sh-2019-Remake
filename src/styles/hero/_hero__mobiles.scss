@@ -1,0 +1,60 @@
+@import '../utils/variables';
+
+.hero {
+    .mobiles {
+        order: 2;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 8.25em;
+        width: 40vw;
+        position: relative;
+        top: -4em;
+
+        @media (max-width: $mobile-width) {
+            order: 3;
+            text-align: center;
+            height: 75vw;
+            flex-basis: initial;
+            width: 100vw;
+            position: initial;
+            margin-bottom: 5vh;
+        }
+
+        &__paragraph {
+            font: 400 .75rem/2.5vw 'Roboto';
+            width: 95%;
+            text-align: left;
+
+            @media (max-width: $mobile-width) {
+                width: 90vw;
+                font-size: 5vw;
+                line-height: 1.5;
+                padding: 0.1em .5rem;
+                margin: 0;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            margin-right: 0.4em;
+            margin-top: 1em;
+            color: $background-color-secondary;
+            background: black;
+            height: 4.5vw;
+            width: 12vw;
+            font-size: 0.75em;
+            line-height: 4.5vw;
+            text-align: center;
+
+            @media (max-width: $mobile-width) {
+                padding: 0;
+                margin: 1em 0.4em;
+                height: 14vw;
+                width: 40vw;
+                line-height: 14vw;
+                font-size: 1em;
+                font-size: 5vw;
+            }
+        }
+    }
+}
