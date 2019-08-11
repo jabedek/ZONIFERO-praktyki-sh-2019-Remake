@@ -1,3 +1,5 @@
+### Project started at the internship and remade afterwards. Should work nicely in mobile version (320px-700px) and desktop version (701px-1366px).
+
 # Webpack Frontend Starterkit
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/wbkd/webpack-starter.svg)](https://greenkeeper.io/)
