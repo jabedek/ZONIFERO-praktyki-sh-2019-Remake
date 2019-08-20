@@ -1,4 +1,5 @@
-### Project started at the internship and remade (& completed) afterwards. Should work nicely in mobile version (320px-700px) and desktop version (701px-1366px, probably even bigger). No JavaScript. Everybody had to map a website themselves and mentors only showed us good practices and guided us slightly towards better code-writing.
+### Project started at the internship, extended and refactored afterwards. Everybody had to map a website themselves and mentors only showed us good practices and guided us slightly towards better code-writing. 
+#### Should work nicely in mobile version (320px-700px) and desktop version (701px-1366px, probably even bigger). No JavaScript. 
 
 # Webpack Frontend Starterkit
 
